@@ -12,7 +12,7 @@ const Cart = () => {
       <h2>Your Cart</h2>
       <ul>
         {cartCtx.items.map((item) => (
-          <CartItem />
+          <CartItem item={item} />
         ))}
       </ul>
       <p className="cart-total"></p>
