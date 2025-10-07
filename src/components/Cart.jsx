@@ -8,11 +8,11 @@ const Cart = () => {
   const cartCtx = useContext(CartContext);
 
   return (
-    <Modal className="cart">
+    <Modal className="cart" open>
       <h2>Your Cart</h2>
       <ul>
         {cartCtx.items.map((item) => (
-          <CartItem item={item} />
+          <CartItem item={item} key={item.id} />
         ))}
       </ul>
       <p className="cart-total"></p>

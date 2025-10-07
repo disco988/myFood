@@ -29,6 +29,7 @@ const cartReducer = (state, action) => {
       return { ...state, items: updatedItems };
     }
   }
+  return state;
 };
 
 const CartContextProvider = ({ children }) => {
