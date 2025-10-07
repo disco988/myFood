@@ -8,9 +8,9 @@ const Modal = ({ children, open, className = "" }) => {
     const modal = dialog.current;
     if (open) {
       modal.showModal();
+    } else {
+      modal.close();
     }
-
-    return () => {};
   }, [open]);
 
   return createPortal(
