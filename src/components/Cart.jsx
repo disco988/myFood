@@ -10,7 +10,11 @@ const Cart = () => {
   const userCtx = useContext(UserContext);
 
   return (
-    <Modal className="cart" open={userCtx.userProgress === "cart"}>
+    <Modal
+      className="cart"
+      open={userCtx.userProgress === "cart"}
+      onClose={userCtx.hideCart}
+    >
       <h2>Your Cart</h2>
       <ul>
         {cartCtx.items.map((item) => (
