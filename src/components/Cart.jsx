@@ -13,7 +13,7 @@ const Cart = () => {
     <Modal
       className="cart"
       open={userCtx.userProgress === "cart"}
-      onClose={userCtx.hideCart}
+      onClose={userCtx.userProgress === "cart" ? userCtx.hideCart : null}
     >
       <h2>Your Cart</h2>
       <ul>
@@ -24,7 +24,7 @@ const Cart = () => {
       <p className="cart-total"></p>
       <p className="modal-actions">
         <Button onClick={userCtx.hideCart}>Close</Button>
-        <Button>Go to Checkout</Button>
+        <Button onClick={userCtx.openCheckout}>Go to Checkout</Button>
       </p>
     </Modal>
   );

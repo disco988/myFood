@@ -3,6 +3,8 @@ import { createContext, useState } from "react";
 export const UserContext = createContext({
   openCart: () => {},
   hideCart: () => {},
+  openCheckout: () => {},
+  hideCheckout: () => {},
   userProgress: "",
 });
 
@@ -17,9 +19,19 @@ const UserContextProvider = ({ children }) => {
     setUserProgress("");
   };
 
+  const openCheckout = () => {
+    setUserProgress("checkout");
+  };
+
+  const hideCheckout = () => {
+    setUserProgress("");
+  };
+
   const userContextValue = {
     openCart,
     hideCart,
+    openCheckout,
+    hideCheckout,
     userProgress: userProgress,
   };
 
