@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { currencyFormater } from "../utils/currencyFormater";
+import { currencyFormatter } from "../utils/currencyFormatter";
 import { CartContext } from "../store/CartContext";
 import { useContext } from "react";
 
@@ -18,7 +18,7 @@ const MealItem = ({ item }) => {
         <div>
           <h3>{item.name}</h3>
           <p className="meal-item-price">
-            {currencyFormater.format(item.price)}
+            {currencyFormatter.format(item.price)}
           </p>
           <p className="meal-item-description">{item.description}</p>
         </div>
